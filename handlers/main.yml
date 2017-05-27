@@ -1,0 +1,19 @@
+---
+- name: start docker-compose-grafana
+  become: true
+  docker_service:
+    project_src: "{{ grafana_opt_dir }}"
+    state: present
+
+- name: restart docker-compose-grafana
+  become: true
+  docker_service:
+    project_src: "{{ grafana_opt_dir }}"
+    state: present
+    restarted: yes
+
+- name: stop docker-compose-grafana
+  become: true
+  docker_service:
+    project_src: "{{ grafana_opt_dir }}"
+    state: absent

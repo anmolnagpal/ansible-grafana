@@ -1,0 +1,16 @@
+---
+- name: install grafana
+  include: install.yml
+  tags:
+    - full-deploy
+
+- name: configure grafana
+  include: configure.yml
+  tags:
+    - full-deploy
+
+- name: start grafana
+  include: started.yml
+  tags:
+    - full-deploy
+

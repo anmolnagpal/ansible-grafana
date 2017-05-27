@@ -1,0 +1,5 @@
+---
+- name: ensure grafana docker-compose started
+  shell: /bin/true
+  notify:
+    - start docker-compose-grafana
